@@ -1,29 +1,12 @@
-import React, { useState } from 'react'
+import "./App.css";
+import ClassCounter from "./components/ClassCounter";
+import UseEffectCounter from "./components/UseEffectCounter";
 
-function UseStateWithObjects() {
-    const [name, setName] = useState({ firstName: "", lastName: "" });
-
-    return (
-        <div>
-            <form>
-                <input
-                    type="text"
-                    value={name.firstName}
-                    onChange={e => setName({
-                        firstName: e.target.value
-                    })}
-                />
-                <input
-                    type="text"
-                    value={name.lastName}
-                    onChange={e => setName({
-                        lastName: e.target.value
-                    })}
-                />
-                <h2>{JSON.stringify(name)}</h2>
-            </form>
-        </div>
-    )
+function App() {
+  return <div className="App">
+      {/* <ClassCounter /> */}
+      <UseEffectCounter />
+  </div>;
 }
 
-export default UseStateWithObjects
+export default App;
